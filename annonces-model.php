@@ -1,9 +1,9 @@
 <?php
-  require_once('init.inc.php');
+require_once('init.inc.php');
 
 
-  function getListeAnnonces($filtres){
+function getListeAnnonces(){
 
-  }
+}
 
 ?>

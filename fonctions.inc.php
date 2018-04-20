@@ -56,6 +56,6 @@ function validePosteEmail($emailPostName){
   //returns the email as a string if everything checks out
   //returns null if $_POST not set
   //returns empty string if set but not valid email
-  return (filter_input(INPUT_POST, $emailPostName, FILTER_VALIDATE_EMAIL);)
+  return (filter_input(INPUT_POST, $emailPostName, FILTER_VALIDATE_EMAIL));
 
 }

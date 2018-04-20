@@ -51,10 +51,6 @@
                         <input class="form-control" type="email" name="email" id="email" placeholder="Votre email"><br>
                     </div>
                     <div class="form-group">
-                        <label for="mdp">Mot de passe : </label><br>   
-                        <input class="form-control" type="password" name="mdp" id="mdp" placeholder="Votre mot de passe"><br>
-                    </div>
-                    <div class="form-group">
                         <label for="civilite">Civilite :</label><br>
                         <input type="radio" name="civilite" id="civilite" name="civilite" value="m"> Homme
                         <input type="radio" name="civilite" id="civilite" name="civilite" value="f"> Femme  

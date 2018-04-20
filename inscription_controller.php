@@ -18,9 +18,6 @@ if(isset($_POST) && !empty($_POST)){
         debug($valeur);
     }
 
-
-
-
     insertionInscription($valeur);
 
 }else{

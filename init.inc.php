@@ -1,9 +1,9 @@
 <?php
 //---------------------CONNEXION BDD
-try{ 
+try{
 
-$bdd= new PDO('mysql:host=localhost; dbname=troc','root', '', array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));}catch (Exception $e){
-    
+$bdd= new PDO('mysql:host=localhost; dbname=troc','root', 'root', array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));}catch (Exception $e){
+
     echo 'espece de noob ! tu as foire !', $e->getMessage();
     die();
 }
@@ -34,6 +34,6 @@ $content = '';
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $extra = 'boutique.php';*/
 
-//------------  
+//------------
 
 //require_once("fonctions.inc.php");

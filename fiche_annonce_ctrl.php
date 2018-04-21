@@ -7,3 +7,13 @@ if (isset ($_GET['ficheAction']) && $_GET['ficheAction'] == 'creer' ){
 } else {
   require_once('fiche_annonce_view.php');
 }
+
+
+?>
+
+<script>
+$(document).ready(function(){
+    $('#select-categorie').html('<?= getListeCategories('<option>','</option>');?>');
+});
+
+</script>

@@ -29,4 +29,4 @@ if(isset($_POST) && !empty($_POST)){
 }
 }
 
-include 'inscription.php';
+include 'inscription_view.php';

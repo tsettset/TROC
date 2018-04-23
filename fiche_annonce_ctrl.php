@@ -17,6 +17,9 @@ if (isset ($_GET['ficheAction']) && $_GET['ficheAction'] == 'creer' ){
 
 <script>
 $(document).ready(function(){
+  $('#message_board').hide();
+  $('#validation_success').hide();
+  $('#validation_failure').hide();
   //liste des categories depuis la bdd, l'affiche avec tag ouvrant/fermant
   $('#select_categorie').html('<?= getListeCategories('<option>','</option>');?>');
   $('#submit_creation').on('click',function(event){
@@ -29,13 +32,18 @@ $(document).ready(function(){
 function ajax(){
   var params = $('#form_creation_annonce').serialize();
   $.post('check_creation_annonce.php',params,function(reponse){
+    console.log(reponse.validation);
     if (reponse.validation == 'ok'){
-      //var resultat_validation = reponse.validation + ' <br> ' + reponse.description_courte + ' <br> ' + reponse.description_longue;
-      var resultat_validation = '';
-      for
-      $('#validation_post').html(resultat_validation);
+      //var resultat_validation = reponse.validation;
+      var resultat_validation = reponse.message;
+      $('#validation_success').html(resultat_validation);
+      $('#message_board').show();
+      $('#validation_success').show();
     } else{
-      console.log('Non valide !');
+      var resultat_validation = reponse.message;
+      $('#validation_failure').html(resultat_validation);
+      $('#message_board').show();
+      $('#validation_success').show();
     }
   },'json');
 

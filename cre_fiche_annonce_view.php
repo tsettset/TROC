@@ -1,4 +1,3 @@
-<?php $test = 'php var'; ?>
 <h1>Creer une annonce</h1>
 <form method="post" action="#" id="form_creation_annonce">
   <div class="container">
@@ -57,8 +56,10 @@
       <input type="text" class="form-control" name="pays_annonce" id="pays_annonce" placeholder="Pays">
     </div>
   </div>
-  <div class="row mt-3 p-3" >
-    <div class="col-md-6 offset-3" id="validation_post">
+  <div class="row mt-3 p-3" id="message_board" >
+    <div class="col-md-6 offset-3 alert alert-success" id="validation_success">
+    </div>
+    <div class="col-md-6 offset-3 alert alert-danger" id="validation_failure">
     </div>
   </div>
   <div class="row border mt-3 p-3">

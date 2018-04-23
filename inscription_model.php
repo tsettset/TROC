@@ -1,7 +1,4 @@
 <?php
-include 'fonctions.inc.php';
-include 'init.inc.php';
-
 
     debug($bdd);
     function insertionInscription($valeur){
@@ -15,9 +12,9 @@ include 'init.inc.php';
         $req->bindValue(':email', $valeur['email'], PDO::PARAM_STR);
         $req->bindValue(':civilite', $valeur['civilite']);
         $req->bindValue(':statut', 0, PDO::PARAM_INT);
-        
-        $req->execute();       
-         
+
+        $req->execute();
+
 
 }
 

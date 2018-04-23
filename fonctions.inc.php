@@ -4,49 +4,48 @@
 
 function debug($var, $mode = 1){
 
-    echo '<div style="background: orange; padding : 5px;">';
-    $trace = debug_backtrace();
-    //echo '<pre>'; print_r($trace); echo '</pre>';
-    echo "Debug demandé dans le fichier : ". $trace[0]['file'] ." à la ligne ". $trace[0]['line'] ."<hr>";
-    if($mode===1){
+  echo '<div style="background: orange; padding : 5px;">';
+  $trace = debug_backtrace();
+  //echo '<pre>'; print_r($trace); echo '</pre>';
+  echo "Debug demandé dans le fichier : ". $trace[0]['file'] ." à la ligne ". $trace[0]['line'] ."<hr>";
+  if($mode===1){
 
-        echo '<pre>'; print_r($var); echo '</pre>';
+    echo '<pre>'; print_r($var); echo '</pre>';
 
-    }else{
+  }else{
 
-        echo '<pre>'; var_dump($var); echo '</pre>';
-    }
-    echo '</div>';
+    echo '<pre>'; var_dump($var); echo '</pre>';
+  }
+  echo '</div>';
 }
 
 //-----------------------------------------------------------------
 function internauteEstConnecte(){
 
-    //cette fonction m'indique si le membre est connecte
+  //cette fonction m'indique si le membre est connecte
 
-    if(!isset($_SESSION['donnees'])){ // si session membre n'est pas defini, cela veut dire que l'internaute n'est pas passe par la page inscription
+  if(!isset($_SESSION['donnees'])){ // si session membre n'est pas defini, cela veut dire que l'internaute n'est pas passe par la page inscription
 
-        return false;
-    }else{
+    return false;
+  }else{
 
-        return true;
-    }
+    return true;
+  }
 }
 
 //------------------------------------------------------------------
 
 function internauteEstConnecteEtEstAdmin(){
 
-//cette fonction m'indique si le membre est admin
+  //cette fonction m'indique si le membre est admin
 
-    if(internauteEstConnecte() && $_SESSION['donnees']['statut']==1){
-        //si la session membre est definie et que le statut est à 1, c'est qu'il est admin on retourne 'true'
+  if(internauteEstConnecte() && $_SESSION['donnees']['statut']==1){
+    //si la session membre est definie et que le statut est à 1, c'est qu'il est admin on retourne 'true'
 
-        return true;
-    }else{
-
-        return false;
-    }
+    return true;
+  }else{
+    return false;
+  }
 }
 
 //---------------------Fonctions de validation d'inputs----------------------

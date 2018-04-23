@@ -1,9 +1,9 @@
 <?php
 
-include 'inscription_model.php';
+require_once ('inscription_model.php');
 
 if(isset($_POST['submit'])){
-    
+
 
 if(isset($_POST) && !empty($_POST)){
 
@@ -21,7 +21,7 @@ if(isset($_POST) && !empty($_POST)){
     }
 
     insertionInscription($valeur);
-    
+
 
 }else{
 

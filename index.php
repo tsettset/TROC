@@ -25,10 +25,6 @@ switch ($page) {
     $GLOBALS['currentPageName'] = 'Fiche Annonce';
     $controllerToCall = 'fiche_annonce_ctrl.php';
     break;
-  case 'inscription':
-    $GLOBALS['currentPageName'] = 'Inscription';
-    $controllerToCall = 'inscription_controller.php';
-    break;
   default:
     $controllerToCall = 'accueil_ctrl.php'; //valeur par defaut du controller
     break;

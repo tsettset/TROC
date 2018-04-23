@@ -1,7 +1,30 @@
 <?php
-$GLOBALS['currentPageName'] = 'Inscription';//Set up la globale qui va etre utilisee pour le titre de la page
+require_once('init.inc.php');
+require_once('fonctions.inc.php');
 
-$controllerToCall = 'inscription_controller.php';//set up le controller a appeler
+
+/*
+* Definition de la globale pour le titre de la page
+* et du controller a appeler
+*/
+$page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_SPECIAL_CHARS);//traitement securite de $_GET['page']
+
+switch ($page) {
+  case 'fannonce':
+  $GLOBALS['currentPageName'] = 'Fiche Annonce';
+  $controllerToCall = 'fiche_annonce_ctrl.php';
+  break;
+  case 'inscription':
+  $GLOBALS['currentPageName'] = 'Inscription';
+  $controllerToCall = 'inscription_controller.php';
+  break;
+  default:
+  $controllerToCall = 'accueil_ctrl.php'; //valeur par defaut du controller
+  break;
+}
+
+
+
 
 require_once('header.inc.php');//tete
 

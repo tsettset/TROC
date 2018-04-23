@@ -66,7 +66,7 @@
               <li type="button" data-toggle="modal" data-target="#modalLoginForm"><a href="#">Inscription</a></li>
 
 
-              <li><a href="?action&affichage=connexion">Connexion</a></li>
+              <li><a href="">Connexion</a></li>
               <li><a href="?action&affichage=profil">Profil</a></li>
             </ul>
           </li>
@@ -97,3 +97,4 @@
       </div>
     </div>
   </div>        
+

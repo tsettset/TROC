@@ -1,7 +1,6 @@
-<div class="container-fluid">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
 
+  <nav class="navbar navbar-inverse ">
+     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
@@ -33,9 +32,14 @@
         </form>
 
       </div>
-
     </div>
-  </nav>
+ </nav>
+
+
+ 
+  <br>
+  <br>
+
   <div class="modal fade" id="modalLoginForm" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -54,4 +58,4 @@
       </div>
     </div>
   </div>
-</div>
+

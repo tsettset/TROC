@@ -14,14 +14,14 @@ catch (Exception $e)
 
 //-------------------- SESSION
 try{
-  
+
   session_start();
-  
+
 }catch(Exception $e){
-  
+
   echo $e->getMessage();
   die();
-  
+
 }
 
 

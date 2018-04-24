@@ -1,7 +1,26 @@
 <?php
 
-if(internauteEstConnecte){
+include 'connexion_model.php';
+
+if(!internauteEstconnecte){
     
-    session_start();
-    
+  
+   if(verifConnexion()){
+       
+       echo 'true';
+   }else{
+       
+       echo 'false';
+   }
+       
 }
+
+
+
+
+
+
+include 'connexion_view.php';
+
+
+

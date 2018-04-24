@@ -3,10 +3,16 @@
     include 'init.inc.php';
 
     debug($bdd);
-    function verifConnexion($valeur){
-    debug($bdd);
-    $req=$bdd->prepare('select * from membre where pseudo=:pseudo');
-    $req->bindValue(':pseudo', $valeur['pseudo'], PDO::PARAM_STR);
-    $req->execute();
-   
-    }
+    
+function verifConnexion(){
+     global $bdd;
+
+    $req=$bdd->query('select * from membre');
+    $donnees=$req->fetchAll(PDO::FETCH_ASSOC);
+    debug($donnees);
+      
+}
+    
+verifConnexion();
+ 
+?>

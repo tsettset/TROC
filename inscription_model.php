@@ -1,6 +1,5 @@
 <?php
-include 'fonctions.inc.php';
-include 'init.inc.php';
+
 
 
     debug($bdd);

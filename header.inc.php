@@ -9,7 +9,15 @@
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 -->
    
-  <title>Dashboard Template for Bootstrap</title>
+<?php echo '<title>';
+    if (isset($GLOBALS['currentPageName']))
+{
+      echo $GLOBALS['currentPageName'].' -  ';
+}
+    echo SITENAME .'</title>';
+    
+    ?>
+
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -57,7 +65,7 @@
                   <li type="button" data-toggle="modal" data-target="#modalLoginForm"><a href="#">Inscription</a></li>
 
 
-                  <li><a href="">Connexion</a></li>
+                  <li><a href="connexion.php">Connexion</a></li>
                   <li><a href="?action&affichage=profil">Profil</a></li>
                 </ul>
               </li>
@@ -74,7 +82,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header text-center">
-              <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+              <h4 class="modal-title w-100 font-weight-bold">Login</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -87,5 +95,33 @@
             </div>
           </div>
         </div>
-      </div>        
-    </div>
+      </div>
+      
+        
+  <!----------------------------------------------------MODAL CONNEXION EN STANDBY-------------------------------------------------------------------
+    
+    
+     ------------------------------------PARTIE A INSERER DANS LE MENU DEROULANT-----------------------------
+        <li type="button" data-toggle="modal" data-target="#modalSignInForm"><a href="">Connexion</a></li> 
+     --------------------------------------------------------------------------------------------------------
+     
+     
+      <div class="modal fade" id="modalSignInForm" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <p><?php //include'connexion_controller.php'; ?></p>
+
+
+            </div>
+          </div>
+        </div>
+      </div>              
+    </div>-->

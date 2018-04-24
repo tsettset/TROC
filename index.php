@@ -10,12 +10,7 @@ require_once('fonctions.inc.php');
 
 
 
-echo '<title>';
-if (isset($GLOBALS['currentPageName']))
-{
-  echo $GLOBALS['currentPageName'].' -  ';
-}
-echo SITENAME .'</title>';
+
 
 
 $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_SPECIAL_CHARS);//traitement securite de $_GET['page']
@@ -25,9 +20,9 @@ switch ($page) {
     $GLOBALS['currentPageName'] = 'Fiche Annonce';
     $controllerToCall = 'fiche_annonce_ctrl.php';
     break;
-  case 'inscription':
-    $GLOBALS['currentPageName'] = 'Inscription';
-    $controllerToCall = 'inscription_controller.php';
+  case 'connexion':
+    $GLOBALS['currentPageName'] = 'Connexion';
+    $controllerToCall = 'connexion.php';
     break;
   default:
     $controllerToCall = 'accueil_ctrl.php'; //valeur par defaut du controller
